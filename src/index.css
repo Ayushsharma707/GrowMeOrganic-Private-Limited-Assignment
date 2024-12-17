@@ -1,0 +1,86 @@
+/* Basic Pagination Style */
+.p-paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style for pagination buttons */
+.p-paginator button {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.p-paginator button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Highlight the active page */
+/* Highlight the active page dynamically */
+.p-paginator .p-paginator-page.p-highlight {
+  background-color: #007bff !important; /* Ensure the selected page is styled */
+  color: white !important;
+  border-color: #007bff !important;
+}
+
+
+/* Style for the first and last page buttons */
+.p-paginator .p-first, .p-paginator .p-last {
+  border-radius: 4px;
+}
+
+/* Style for ellipsis (...) */
+.p-paginator .p-paginator-ellipsis {
+  font-weight: bold;
+}
+
+.artwork-image {
+  width: 100px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dialog */
+.dialog-box .p-dialog-header {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+.dialog-footer {
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.dialog-footer .p-button {
+  margin-left: 10px;
+}
+
+/* Button */
+.p-button-text {
+  background-color: transparent;
+  border: none;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content span {
+  font-weight: bold;
+}
