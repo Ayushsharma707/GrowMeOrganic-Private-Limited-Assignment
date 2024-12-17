@@ -3,6 +3,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
+import { DataTablePageEvent } from 'primereact/datatable';
 import { InputNumber } from 'primereact/inputnumber';
 
 interface Artwork {
@@ -24,7 +25,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
   const [rows] = useState<number>(12);
-  const [selectedArtworks, setSelectedArtworks] = useState<number[]>([]);
+  const [selectedArtworks, setSelectedArtworks] = useState<number[]>([]); 
   const [visibleDialog, setVisibleDialog] = useState<boolean>(false);
   const [selectedRowCount, setSelectedRowCount] = useState<number>(0);
 
@@ -48,12 +49,13 @@ const App: React.FC = () => {
   };
 
   // This function gets triggered whenever the page is changed
-  const onPageChange = (event: any) => {
+const onPageChange = (event: DataTablePageEvent) => {
+  if (event.page !== undefined) {
     const newPage = event.page + 1; // PrimeReact uses 0-based page indexing.
     setPage(newPage);
     fetchData(newPage, rows);
-  };
-
+  }
+};
   // Function to select rows from multiple pages
   const selectRowsAcrossPages = async (rowCount: number) => {
     const selectedIds: number[] = [];
@@ -145,7 +147,7 @@ const App: React.FC = () => {
         responsiveLayout="scroll"
         lazy
         first={(page - 1) * rows}
-        onRowDoubleClick={(e) => handleRowDoubleClick(e.data)}
+        onRowDoubleClick={(e) => handleRowDoubleClick(e.data as Artwork)} // Fix here
         className="data-table"
       >
         <Column selectionMode="multiple" headerStyle={{ width: '3em' }} />
