@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# PrimeReact DataTable - Row Selection with Server-Side Pagination
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview  
+This is a React project built using **Vite** and **TypeScript** that implements a PrimeReact `DataTable` component to fetch and display data from the Art Institute of Chicago API. The table supports:
+- **Server-side pagination**
+- **Row selection across pages**
+- **Persistence of selected rows when switching between pages**
 
-Currently, two official plugins are available:
+The application ensures optimal performance by fetching only the required data for each page while adhering to best practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used  
+- **React**: For building the UI components.  
+- **Vite**: To quickly create and build the React application.  
+- **TypeScript**: For strong typing and better development experience.  
+- **PrimeReact**: For the DataTable and UI components.  
+- **CSS**: For styling and layout.  
+- **Fetch API**: For making API requests.  
+- **Netlify**: For application deployment.
 
-## Expanding the ESLint configuration
+## Core Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Server-Side Pagination  
+- **Feature**: Data is fetched dynamically from the server for the respective page.  
+- **How it Works**: When a user navigates to a new page, an API call is made to fetch data for that specific page.
 
-- Configure the top-level `parserOptions` property like this:
+### 2. Row Selection with Persistence  
+- **Feature**: Rows can be selected (or deselected) across multiple pages.  
+- **How it Works**: Row selection persists across different pages, and the selection panel updates accordingly.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 3. Custom Row Selection Panel  
+- **Feature**: A custom panel allows users to manage selected rows seamlessly.  
+- **How it Works**: The panel displays the selected rows across all pages, ensuring easy management.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 4. Double-Click to Select a Row  
+- Users can double-click any row to quickly select it.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 5. Data Rendering  
+The following fields are displayed in the DataTable:  
+- **Title**  
+- **Place of Origin**  
+- **Artist Display**  
+- **Inscriptions**  
+- **Start Date**  
+- **End Date**  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 6. Error Handling  
+Proper error handling ensures that failed API requests display an appropriate message to the user.    
+
+## How to Run the Project Locally
+
+### 1. Prerequisites
+Make sure you have the following installed:
+- **Node.js** (v16 or later)
+- **NPM** or **Yarn**
+
+### 2. Clone the Repository 
+
+### 1. Prerequisites
+Make sure you have the following installed:
+- **Node.js** (v16 or later)
+- **NPM** or **Yarn**
+
+### Install Dependencies
+- npm install
+
+### Run the Application
+- npm run dev
+
+## GitHub Repository  
+[https://github.com/your-username/project-repo-name](https://github.com/your-username/project-repo-name)
+
+## Live Demo  
+[https://your-deployment-url.netlify.app](https://your-deployment-url.netlify.app)
