@@ -72,4 +72,4 @@ Make sure you have the following installed:
 [https://github.com/your-username/project-repo-name](https://github.com/Ayushsharma707/GrowMeOrganic-Private-Limited-Assignment)
 
 ## Live Demo  
-[https://your-deployment-url.netlify.app](https://primereact-datatable.netlify.app/)
+[https://primereact-datatable.netlify.app/](https://primereact-datatable.netlify.app/)
