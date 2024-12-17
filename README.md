@@ -1,7 +1,9 @@
 # PrimeReact DataTable - Row Selection with Server-Side Pagination
 
 ## Overview  
-This is a React project built using **Vite** and **TypeScript** that implements a PrimeReact `DataTable` component to fetch and display data from the Art Institute of Chicago API. The table supports:
+This is a React project built using **Vite** and **TypeScript** that implements a PrimeReact `DataTable` component to fetch and display data from the              
+[Art Institute of Chicago API](https://api.artic.edu/api/v1/artworks?page).                            
+The table supports:
 - **Server-side pagination**
 - **Row selection across pages**
 - **Persistence of selected rows when switching between pages**
